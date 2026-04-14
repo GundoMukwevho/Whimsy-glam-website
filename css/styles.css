@@ -15,6 +15,17 @@ body {
     font-size: 48px;
 }
 
+.hero-logo {
+    width: 250px;
+    max-width: 80%;
+}
+
+.hero-tagline {
+    margin-top: 15px;
+    font-size: 18px;
+    color: white;
+}
+
 .hero button {
     margin-top: 20px;
     padding: 12px 30px;
