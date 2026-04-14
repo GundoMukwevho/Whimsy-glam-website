@@ -1,3 +1,4 @@
+
 body {
     background: #ffe4ec;
     color: #333;
@@ -23,8 +24,19 @@ body {
     border-radius: 25px;
     border: none;
     cursor: pointer;
+    transition: transform 0.3s ease ;
 }
 
+.hero button:hover{
+    transform: scale(1.2,1.2);
+}
+
+.cta{
+    transition: transform 0.3s ease ;
+}
+.cta:hover{
+    transform: scale(1.2,1.2);
+}
 /* SERVICES */
 .services {
     padding: 60px 20px;
