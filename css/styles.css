@@ -10,6 +10,11 @@ body {
     padding: 80px 20px;
     background: linear-gradient(to right, #ffc0d3, #ff9eb5);
     color: white;
+    width:50%;
+    border-radius: 30px;
+    position: relative;
+    left:570px;
+    bottom: 230px;
 }
 
 .hero h1 {
@@ -19,6 +24,9 @@ body {
 .hero-logo {
     width: 250px;
     max-width: 80%;
+    position: relative;
+   left:30px;
+   top:30px;
 }
 
 .hero-tagline {
@@ -68,6 +76,20 @@ body {
     transform: scale(1.2,1.2);
 }
 
+#scrollEffect{
+    animation: autoShowAnimation both;
+    animation-timeline: view(70% 5%);
+}
+@keyframes autoShowAnimation {
+    from {
+        opacity: 0;
+         transform: translateY(200px) scale(0.3);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 /* GALLERY */
 .gallery {
     padding: 60px 20px;
