@@ -82,7 +82,7 @@ body {
 }
 #booking{
     animation: autoShowAnimation2 both;
-    animation-timeline: view(60% 5%);
+    animation-timeline: view(100% 5%);
 }
 @keyframes autoShowAnimation2 {
     from {
