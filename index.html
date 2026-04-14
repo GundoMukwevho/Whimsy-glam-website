@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>WhimsyGlam Nails</title>
+
+<link rel="stylesheet" href="css/global.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header class="navbar">
+    <div class="logo">WhimsyGlam</div>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#booking">Book</a>
+    </nav>
+
+    <button class="cta" onclick="scrollToBooking()">Book Now</button>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="home">
+    <h1>WhimsyGlam 💅</h1>
+    <p>Bring a Buddy Special</p>
+    <button onclick="scrollToBooking()">Book Now</button>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+    <h2>Our Services</h2>
+
+    <div class="service-card">
+        <h3>Plain Sets</h3>
+        <p>Any length/shape</p>
+        <strong>R180</strong>
+    </div>
+
+    <div class="service-card">
+        <h3>Design Sets</h3>
+        <p>Any length/shape</p>
+        <strong>R250</strong>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section class="gallery" id="gallery">
+    <h2>Our Work 💅</h2>
+
+    <div class="gallery-grid">
+
+        <div class="gallery-item">
+            <img src="images/nails1.jpg" onclick="openModal(this)">
+            <div class="overlay">View</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/nails2.jpg" onclick="openModal(this)">
+            <div class="overlay">View</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/nails3.jpg" onclick="openModal(this)">
+            <div class="overlay">View</div>
+        </div>
+
+        <div class="gallery-item">
+            <img src="images/nails4.jpg" onclick="openModal(this)">
+            <div class="overlay">View</div>
+        </div>
+
+    </div>
+</section>
+
+
+
+<section class="reveal" id="home">
+<section class="reveal" id="services">
+<section class="reveal" id="gallery">
+<section class="reveal" id="booking">
+
+<!-- BOOKING -->
+<section class="booking" id="booking">
+    <h2>Book Appointment</h2>
+
+    <input type="text" id="name" placeholder="Your Name"><br>
+
+    <select id="service">
+        <option value="Plain Set">Plain Set</option>
+        <option value="Design Set">Design Set</option>
+    </select><br>
+
+    <input type="date" id="date"><br>
+    <input type="time" id="time"><br>
+
+    <button onclick="book()">Confirm Booking</button>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal" onclick="closeModal()">
+    <img id="modalImg">
+</div>
+
+<script src="js/script.js"></script>
+<!-- FLOATING WHATSAPP BUTTON -->
+<a class="whatsapp-float" href="https://wa.me/27730617274" target="_blank">
+    💬
+</a>
+</body>
+</html>
+
