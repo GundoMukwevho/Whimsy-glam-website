@@ -183,3 +183,107 @@ body {
     max-width: 80%;
     margin-top: 60px;
 }
+
+/* PRICE LIST BUTTON */
+.price-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: hotpink;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.price-btn:hover {
+    transform: scale(1.1);
+}
+
+/* HIDDEN STATE */
+.hidden {
+    display: none;
+}
+
+/* PRICE IMAGES */
+.price-images {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.price-images img {
+    width: 220px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* PRICE BUTTON */
+.price-btn {
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: hotpink;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+/* 🔥 FIXED LOGIC */
+.price-images {
+    display: none; /* hidden by default */
+    margin-top: 25px;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.price-images.show {
+    display: flex; /* show when active */
+}
+
+.price-images img {
+    width: 220px;
+    border-radius: 15px;
+}
+
+/* PRICE MODAL BACKGROUND */
+.price-modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+/* MODAL CONTENT (ALL 3 IMAGES SIDE BY SIDE) */
+.price-modal-content {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 90%;
+}
+
+/* IMAGES */
+.price-modal-content img {
+    width: 300px;
+    border-radius: 15px;
+}
+
+/* CLOSE BUTTON */
+.close-btn {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+}

@@ -1,54 +1,80 @@
-// Scroll to booking
-function scrollToBooking() {
-    document.getElementById("booking").scrollIntoView({
-        behavior: "smooth"
-    });
-}
+document.addEventListener("DOMContentLoaded", function () {
 
-// Modal open
-function openModal(img) {
-    document.getElementById("modal").style.display = "block";
-    document.getElementById("modalImg").src = img.src;
-}
+    window.scrollToBooking = function () {
+        document.getElementById("booking").scrollIntoView({
+            behavior: "smooth"
+        });
+    };
 
-// Modal close
-function closeModal() {
-    document.getElementById("modal").style.display = "none";
-}
+    window.openModal = function (img) {
+        document.getElementById("modal").style.display = "block";
+        document.getElementById("modalImg").src = img.src;
+    };
 
-// WhatsApp booking
-function book() {
-    const name = document.getElementById("name").value;
-    const service = document.getElementById("service").value;
-    const date = document.getElementById("date").value;
-    const time = document.getElementById("time").value;
+    window.closeModal = function () {
+        document.getElementById("modal").style.display = "none";
+    };
 
-    if (!name || !date || !time) {
-        alert("Please fill in all fields");
-        return;
-    }
+    window.book = function () {
+        const name = document.getElementById("name").value;
+        const service = document.getElementById("service").value;
+        const date = document.getElementById("date").value;
+        const time = document.getElementById("time").value;
 
-    const phoneNumber = "27730617274";
+        if (!name || !date || !time) {
+            alert("Please fill in all fields");
+            return;
+        }
 
-    const message = `Hello, I'd like to book an appointment 💅
+        const phoneNumber = "27730617274";
+
+        const message = `Hello, I'd like to book an appointment 💅
 
 Name: ${name}
 Service: ${service}
 Date: ${date}
 Time: ${time}`;
 
-    window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
-}
+        window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+    };
 
-// SCROLL REVEAL ANIMATION
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("active");
-        }
+    // ✅ FIXED TOGGLE
+    const priceBtn = document.getElementById("priceBtn");
+    const priceImages = document.getElementById("priceImages");
+
+    if (priceBtn && priceImages) {
+        priceBtn.addEventListener("click", () => {
+
+            if (priceImages.classList.contains("show")) {
+                priceImages.classList.remove("show");
+                priceBtn.textContent = "View Full Price List";
+            } else {
+                priceImages.classList.add("show");
+                priceBtn.textContent = "Hide Price List";
+            }
+
+        });
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
     });
+
+    document.querySelectorAll(".scrollEffect").forEach(el => {
+        observer.observe(el);
+    });
+
 });
 
-document.querySelectorAll(".reveal").forEach(el => {
-    observer.observe(el);
-});
+// PRICE MODAL
+window.openPriceModal = function () {
+    document.getElementById("priceModal").style.display = "flex";
+};
+
+window.closePriceModal = function () {
+    document.getElementById("priceModal").style.display = "none";
+};

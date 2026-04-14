@@ -12,7 +12,6 @@
 
 <body>
 
-<!-- NAVBAR -->
 <header class="navbar">
     <div class="logo">WhimsyGlam</div>
 
@@ -26,11 +25,9 @@
     <button class="cta" onclick="scrollToBooking()">Book Now</button>
 </header>
 
+<img src="images/logo.jpg" alt="WhimsyGlam Logo" class="hero-logo">
 
-<!-- HERO -->
- <img src="images/logo.jpg" alt="WhimsyGlam Logo" class="hero-logo" >
 <section class="hero" id="home">
-     
     <p class="hero-tagline">Bring a Buddy Special</p>
     <h1>WhimsyGlam 💅</h1>
     <p>Bring a Buddy Special</p>
@@ -41,57 +38,55 @@
 <section class="services" id="services">
     <h2>Our Services</h2>
 
-    <div id="scrollEffect" class="service-card">
+    <div class="service-card scrollEffect">
         <h3>Plain Sets</h3>
         <p>Any length/shape</p>
         <strong>R180</strong>
     </div>
 
-    <div id="scrollEffect" class="service-card">
-        <h3 >Design Sets</h3>
+    <div class="service-card scrollEffect">
+        <h3>Design Sets</h3>
         <p>Any length/shape</p>
         <strong>R250</strong>
+    </div>
+
+<button class="price-btn" onclick="openPriceModal()">View Full Price List</button>
+    <div id="priceImages" class="price-images">
+        <img src="images/price1.jpg">
+        <img src="images/price2.jpg">
+        <img src="images/price3.jpg">
     </div>
 </section>
 
 <!-- GALLERY -->
 <section class="gallery" id="gallery">
-    <h2 id="scrollEffect">Our Work 💅</h2>
+    <h2 class="scrollEffect">Our Work 💅</h2>
 
     <div class="gallery-grid">
-
-        <div id="scrollEffect"class="gallery-item">
+        <div class="gallery-item scrollEffect">
             <img src="images/nails1.jpg" onclick="openModal(this)">
             <div class="overlay">View</div>
         </div>
 
-        <div id="scrollEffect"class="gallery-item">
+        <div class="gallery-item scrollEffect">
             <img src="images/nails2.jpg" onclick="openModal(this)">
             <div class="overlay">View</div>
         </div>
 
-        <div id="scrollEffect" class="gallery-item">
+        <div class="gallery-item scrollEffect">
             <img src="images/nails3.jpg" onclick="openModal(this)">
             <div class="overlay">View</div>
         </div>
 
-        <div id="scrollEffect" class="gallery-item">
+        <div class="gallery-item scrollEffect">
             <img src="images/nails4.jpg" onclick="openModal(this)">
             <div class="overlay">View</div>
         </div>
-
     </div>
 </section>
 
-
-
-<section class="reveal" id="home">
-<section class="reveal" id="services">
-<section class="reveal" id="gallery">
-<section class="reveal" id="booking">
-
 <!-- BOOKING -->
-<section class="booking" id="booking" >
+<section class="booking" id="booking">
     <h2>Book Appointment</h2>
 
     <input type="text" id="name" placeholder="Your Name"><br>
@@ -112,14 +107,22 @@
     <img id="modalImg">
 </div>
 
+<!-- PRICE LIST MODAL -->
+<div class="price-modal" id="priceModal">
+    <span class="close-btn" onclick="closePriceModal()">✖</span>
+
+    <div class="price-modal-content">
+        <img src="images/price1.jpg">
+        <img src="images/price2.jpg">
+        <img src="images/price3.jpg">
+    </div>
+</div>
+
 <script src="js/script.js"></script>
-<!-- FLOATING WHATSAPP BUTTON -->
+
 <a class="whatsapp-float" href="https://wa.me/27730617274" target="_blank">
     💬
 </a>
 
-
-
 </body>
 </html>
-
